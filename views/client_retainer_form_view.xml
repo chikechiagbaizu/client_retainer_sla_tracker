@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="client_retainer_form_view" model="ir.ui.view">
+            <field name="name">client.retainer.form.view</field>
+            <field name="model">client.retainer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <widget name="web_ribbon" title="Needs Attention" bg_color="text-bg-warning"
+                            invisible="state != 'warning'" />
+                        <group>
+                            <group>
+                                <field name="partner_id" />
+                                <field name="tier" widget="badge" />
+                                <field name="account_manager_id" />
+                                <field name="active" />
+                            </group>
+                            <group>
+                                <field name="start_date" />
+                                <field name="renewal_date" />
+                                <field name="renewal_status" widget="badge"
+                                    decoration-danger="renewal_status == 'failed'"
+                                    decoration-success="renewal_status == 'success'" />
+                            </group>
+                        </group>
+                        <group string="Hours">
+                            <field name="monthly_hours_allowance" />
+                            <field name="hours_used" />
+                            <field name="state" widget="badge"
+                                decoration-warning="state == 'warning'"
+                                decoration-success="state == 'normal'" />
+                        </group>
+                        <notebook>
+                            <page string="Service Log">
+                                <field name="retainer_service_line_ids">
+                                    <list editable="bottom">
+                                        <field name="date" />
+                                        <field name="description" />
+                                        <field name="hours_logged" />
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_client_retainer_root" name="Client Retainers" sequence="10" />
+        <menuitem id="menu_client_retainer" name="Retainers"
+            parent="menu_client_retainer_root"
+            action="action_client_retainer" sequence="10" />
+    </data>
+</odoo>

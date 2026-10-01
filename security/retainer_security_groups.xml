@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <!-- Agency Admin Group -->
+        <record id="group_agency_admin" model="res.groups">
+            <field name="name">Agency Admin</field>
+        </record>
+
+        <!-- Account Manager Group -->
+        <record id="group_account_manager" model="res.groups">
+            <field name="name">Account Manager</field>
+        </record>
+    </data>
+</odoo>

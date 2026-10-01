@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="client_retainer_list_view" model="ir.ui.view">
+            <field name="name">client.retainer.list.view</field>
+            <field name="model">client.retainer</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="partner_id" />
+                    <field name="tier" />
+                    <field name="account_manager_id" />
+                    <field name="renewal_date" />
+                    <field name="state" widget="badge"
+                        decoration-warning="state == 'warning'"
+                        decoration-success="state == 'normal'" />
+                    <field name="renewal_status" widget="badge"
+                        decoration-danger="renewal_status == 'failed'"
+                        decoration-success="renewal_status == 'success'" />
+                </list>
+            </field>
+        </record>
+    </data>
+</odoo>

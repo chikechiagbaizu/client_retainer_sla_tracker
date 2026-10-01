@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="res_partner_form_retainer_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.retainer.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                    <button name="%(action_client_retainer)d" type="action"
+                        class="oe_stat_button" icon="fa-handshake-o"
+                        context="{'default_partner_id': id}">
+                        <field name="active_retainer_count" widget="statinfo" string="Retainers" />
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

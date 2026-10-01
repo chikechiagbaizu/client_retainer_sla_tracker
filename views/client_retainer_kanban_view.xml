@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="client_retainer_kanban_view" model="ir.ui.view">
+            <field name="name">client.retainer.kanban.view</field>
+            <field name="model">client.retainer</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="card">
+                            <div class="oe_kanban_global_click oe_kanban_card">
+                                <div>
+                                    <strong>
+                                        <field name="partner_id" />
+                                    </strong>
+                                </div>
+                                <div>
+                                    <field name="renewal_date"
+                                        widget="date"
+                                        decoration-danger="renewal_date &lt; (context_today() + relativedelta(days=7))"
+                                        decoration-warning="renewal_date &gt; (context_today() + relativedelta(days=7)) and renewal_date &lt; (context_today() + relativedelta(days=30))"
+                                        decoration-success="renewal_date &gt; (context_today() + relativedelta(days=30))" />
+                                </div>
+                                <div>
+                                    <field name="tier" />
+                                </div>
+                                <div>
+                                    <field name="account_manager_id" />
+                                </div>
+                                <div>
+                                    <field name="start_date" />
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

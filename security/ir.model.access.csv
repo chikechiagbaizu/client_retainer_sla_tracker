@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_agency_admin_retainer,client.retainer,model_client_retainer,group_agency_admin,1,1,1,1
+access_agency_admin_service_line,retainer.service.line,model_retainer_service_line,group_agency_admin,1,1,1,1
+access_account_manager_retainer,client.retainer,model_client_retainer,group_account_manager,1,0,0,0
+access_account_manager_service_line,retainer.service.line,model_retainer_service_line,group_account_manager,1,0,0,0
