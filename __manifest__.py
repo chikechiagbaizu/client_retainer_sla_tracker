@@ -7,7 +7,7 @@
     """,
     'author': 'Chike Chiagbaizu',
     'maintainer': 'Chike Chiagbaizu',
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.0.1',
     'license': 'LGPL-3',
     'category': 'Operations',
     'sequence': 1,

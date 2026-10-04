@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields
 
 class RetainerServiceLine(models.Model):
     _name = 'retainer.service.line'

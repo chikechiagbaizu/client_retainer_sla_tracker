@@ -4,18 +4,15 @@ class ClientRetainer(models.Model):
     _name = 'client.retainer'
     _description = 'Client Retainer'
 
-    _sql_constraints = [
-        (
-            'monthly_hours_allowance_constraints',
-            'CHECK(monthly_hours_allowance > 0)',
-            'monthly_hours_allowance should be greater than 0.'
-        ),
-        (
-            'hours_used_constraints',
-            'CHECK(hours_used >= 0)',
-            'hours_used cannot be negative.'
-        ),
-    ]
+    _monthly_hours_allowance_constraints = models.Constraint(
+        'CHECK(monthly_hours_allowance > 0)',
+        'monthly_hours_allowance should be greater than 0.'
+    )
+
+    _hours_used_constraints = models.Constraint(
+        'CHECK(monthly_hours_allowance > 0)',
+        'monthly_hours_allowance should be greater than 0.'
+    )
     
     partner_id = fields.Many2one(comodel_name='res.partner', string='Client', required=True, ondelete='cascade')
     tier = fields.Selection(selection=[
