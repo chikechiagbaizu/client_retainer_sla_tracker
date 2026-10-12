@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="ir_cron_client_retainer" model="ir.cron">
+        <field name="name">Retainer: Generate Renewal Invoices</field>
+        <field name="model_id" ref="model_client_retainer" />
+        <field name="state">code</field>
+        <field name="code">model.cron_renewal_date()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="active">True</field>
+    </record>
+</odoo>

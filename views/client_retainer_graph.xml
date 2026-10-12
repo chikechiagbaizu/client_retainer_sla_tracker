@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="client_retainer_graph" model="ir.ui.view">
+        <field name="name">client.retainer.graph</field>
+        <field name="model">client.retainer</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="tier" type="row" />
+                <field name="monthly_value" type="measure" />
+            </graph>
+        </field>
+    </record>
+</odoo>

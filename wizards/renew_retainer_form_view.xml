@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="renew_retainer_form_view" model="ir.ui.view">
+        <field name="name">renew.retainer.form.view</field>
+        <field name="model">renew.retainer</field>
+        <field name="arch" type="xml">
+            <form string="renew_retainer">
+                <sheet>
+                    <group>
+                        <field name="hours_used" readonly="1" />
+                        <field name="renewal_date" readonly="1" />
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_renew_retainer" string="Renew Retainer" type="object"
+                        class="btn-primary" />
+                    <button string="Cancel" special="cancel" class="btn-secondary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

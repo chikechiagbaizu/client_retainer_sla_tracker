@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="action_renew_retainer" model="ir.actions.act_window">
+        <field name="name">Renew Retainer</field>
+        <field name="res_model">renew.retainer</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="renew_retainer_form_view" />
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_client_retainer" />
+        <field name="binding_view_types">form</field>
+    </record>
+</odoo>

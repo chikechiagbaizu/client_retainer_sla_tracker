@@ -7,7 +7,7 @@
     """,
     'author': 'Chike Chiagbaizu',
     'maintainer': 'Chike Chiagbaizu',
-    'version': '19.0.1.0.1',
+    'version': '19.0.1.0.2',
     'license': 'LGPL-3',
     'category': 'Operations',
     'sequence': 1,
@@ -15,7 +15,9 @@
     'installable': True,
     'depends': [
         'base',
-        'contacts'
+        'contacts',
+        'sale',
+        'account',
         ],
     'data': [
         'security/retainer_security_groups.xml',
@@ -24,6 +26,8 @@
         'views/client_retainer_kanban_view.xml',
         'views/client_retainer_form_view.xml',
         'views/client_retainer_list_view.xml',
+        'views/client_retainer_pivot.xml',
+        'views/client_retainer_graph.xml',
         'views/client_retainer_actions.xml',
         'views/res_partner_views.xml',
         'views/client_retainer_menus.xml',

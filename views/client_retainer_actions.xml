@@ -4,7 +4,7 @@
         <record id="action_client_retainer" model="ir.actions.act_window">
             <field name="name">Client Retainers</field>
             <field name="res_model">client.retainer</field>
-            <field name="view_mode">kanban,list,form</field>
+            <field name="view_mode">kanban,list,form,pivot,graph</field>
         </record>
     </data>
 </odoo>
