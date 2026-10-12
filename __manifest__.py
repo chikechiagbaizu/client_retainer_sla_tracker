@@ -20,6 +20,8 @@
         'account',
         ],
     'data': [
+        'data/ir_sequence_client_retainer.xml',
+        'data/ir_cron_client_retainer.xml',
         'security/retainer_security_groups.xml',
         'security/ir.model.access.csv',
         'security/retainer_rule.xml',

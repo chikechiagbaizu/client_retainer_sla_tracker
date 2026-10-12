@@ -12,6 +12,7 @@
                             invisible="state != 'warning'" />
                         <group>
                             <group>
+                                <field name="name" />
                                 <field name="partner_id" />
                                 <field name="tier" widget="badge" />
                                 <field name="account_manager_id" />

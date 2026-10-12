@@ -12,8 +12,11 @@
                             <div class="oe_kanban_global_click oe_kanban_card">
                                 <div>
                                     <strong>
-                                        <field name="partner_id" />
+                                        <field name="name" />
                                     </strong>
+                                </div>
+                                <div>
+                                    <field name="partner_id" />
                                 </div>
                                 <div>
                                     <field name="renewal_date"

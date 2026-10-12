@@ -15,6 +15,7 @@ class ClientRetainer(models.Model):
         'monthly_hours_allowance should be greater than 0.'
     )
     
+    name = fields.Char(string="Reference", required=True, copy=False, readonly=True, default='New')
     partner_id = fields.Many2one(comodel_name='res.partner', string='Client', required=True, ondelete='cascade')
     tier = fields.Selection(selection=[
         ('bronze','Bronze'),
@@ -97,3 +98,10 @@ class ClientRetainer(models.Model):
                     })
 
             record.last_invoiced_renewal = record.renewal_date
+    
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('name',  'New') == 'New':
+                vals['name'] = self.env['ir.sequence'].next_by_code('client.retainer') or 'New'
+        return super().create(vals_list)
