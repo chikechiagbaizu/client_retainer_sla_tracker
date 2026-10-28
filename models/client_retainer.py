@@ -1,4 +1,5 @@
-from odoo import models, fields, api, Command
+from odoo import models, fields, api
+from odoo.fields import Command
 
 class ClientRetainer(models.Model):
     _name = 'client.retainer'

@@ -54,7 +54,7 @@ Built as a hands-on learning project to practice classical model inheritance on 
 Run the module's test suite with:
 
 ```bash
-odoo-bin -d your_database -i client_retainer_tracker --test-enable --stop-after-init
+odoo-bin -d your_database -i client_retainer_sla_tracker --test-enable --stop-after-init
 ```
 
 Tests cover:
